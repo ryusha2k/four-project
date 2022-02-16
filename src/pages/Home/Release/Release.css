@@ -1,0 +1,18 @@
+.release {
+    justify-content: center;
+    text-align: center;
+    height: 282px;
+    padding-top: 75px;
+line-height: 6px;
+}
+
+.release >p {
+    font-size: 18px;
+    letter-spacing: 0.335em;
+    color: #e5e5e5;
+}
+
+.release >h1 {
+    font-size: 72px;
+    letter-spacing: 0.005em;
+}
