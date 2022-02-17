@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Typography } from "@mui/material";
+import { Container, Typography} from "@mui/material";
 
 const cards: string[] = [
   '1',
@@ -11,13 +11,12 @@ const cards: string[] = [
 
 export const BearsVideo = () => {
   return (
-    <Box  sx={{
-      maxWidth: '100%',
+    <Container  sx={{
       display: 'flex',
       justifyContent: 'space-around',
       alignItems: 'center',
       flexWrap: 'wrap',
-      flexDirection: 'column'
+      flexDirection: 'column',
     }}>
         {
           cards.map((name) =>
@@ -29,7 +28,6 @@ export const BearsVideo = () => {
               }}/>
           )
         }
-    </Box>
-
+    </Container>
   );
 }
