@@ -1,97 +1,93 @@
 import React from 'react';
-import {Box, Container, Card, Link, Typography, useTheme, CardContent, CardActions} from '@mui/material';
+import {Box, Typography, useTheme, Button} from '@mui/material';
+import Grid from '@mui/material/Grid';
+import Paper from '@mui/material/Paper';
 
 const Banner = () => {
-    const theme = useTheme();
-    return (
-      <Box sx={{
-        width: '100%',
-        height: '100%',
-        backgroundImage: 'url("/images/banner.png")',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat'
-      }}>
-      <Container>
-        <Box ml={75} mt={40} sx={{
-          width: '500px',
-          [theme.breakpoints.down('lg')] : {
-            ml:55
-          },
-          [theme.breakpoints.down('md')] : {
-            ml:20,
-            width: '500px'
-          },
-          [theme.breakpoints.down('sm')] : {
-            ml:0,
+  const theme = useTheme();
+  return (
+    <Grid container component="main" sx={{
+      height: '130vh',
+      backgroundImage: 'url("/images/banner.png")',
+      backgroundRepeat: 'no-repeat',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+    }}>
+
+
+      <Grid item
+            xs={false}
+            sm={4}
+            md={5}
+            sx={{
+
+              [theme.breakpoints.down('lg')]: {},
+              [theme.breakpoints.down('md')]: {},
+              [theme.breakpoints.down('sm')]: {},
+            }}/>
+        <Grid item xs={12} sm={8} md={7} component={Paper} elevation={0} square sx={{
+          backgroundColor: 'rgba(224, 228, 255, 0.2)',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          [theme.breakpoints.down('sm')]: {
+            display: 'flex',
+            justifyContent: 'flex-end',
+            alignItems: 'flex-end',
           },
         }}>
-          <Card sx={{
-            height: '250px',
-            textAlign: 'center',
-            backgroundColor: 'rgba(242, 189, 239, .3)',
-            boxShadow: '4px 4px 44px 48px rgba(190, 123, 206, 0.2)',
+          <Box
+            sx={{
+              mt: 20,
+              display: 'flex',
+              justifyContent: 'center',
+              flexDirection: 'column',
+              alignItems: 'center',
+              backgroundColor: 'rgba(224, 228, 255, 0.8)',
+            }}
+          >
+        <Typography component="h1" variant="h4" mt={3} sx={{
+          fontWeight: 'bold',
+          color: 'black'
+        }}>
+          PokerHand
+        </Typography>
+        <Typography variant="body2" mt={2} textAlign='center' sx={{
+          fontSize: '18px',
+          color: 'black'
+        }}>
+          asdfhjgasjhdfas adgashjdgashjd asujkdhasjkdgahjs asjkdajksdajkd asjkdasjkda
+        </Typography>
+        <Button
+          href='https://opensea.io/collection/hype-bears-club-official-'
+          target='_blank'
+          sx={{
+            color: 'black',
+            textDecoration: 'none',
+            height: '30px',
+            borderRadius: '10px',
+            paddingX: 5,
+            border: '2px solid black',
+            fontSize: '14px',
+            fontWeight: 'bold',
+            transitionDuration: '.3s',
+            mt: 4,
+            mb: 3,
+            '&:hover': {
+              color: 'gold',
+              boxShadow: 'inset 0 0 0 4px black',
+              border: '4px solid black',
+            },
+            [theme.breakpoints.down('md')]: {
+              mt: 2
+            },
           }}>
-            <CardContent>
-            <Typography  variant="h5" component="div" sx={{
-              fontWeight: 'bold',
-              color: '#800080',
-              [theme.breakpoints.down('md')]: {
-
-              },
-              [theme.breakpoints.down('sm')]: {
-                fontSize: '21px'
-              },
-            }}>PokerHand</Typography>
-            <Typography mt={1} sx={{
-              fontSize: '20px',
-              color: '#ff00ff',
-              [theme.breakpoints.down('md')]: {
-
-              },
-              [theme.breakpoints.down('sm')]: {
-                fontSize: '15px'
-              },
-            }}>asdasd asjdhajks asjfhasjkf asjfasjfka asjfaskjf
-            gdfgdfgdfgdgdfgdfg dfgdfgdfg dfgdfgdfg dfgdfgdf
-            dgdgdfgdfg dfgdfgdfg </Typography>
-              <CardActions sx={{
-                display: 'flex',
-                justifyContent: 'center',
-                [theme.breakpoints.down('sm')]: {
-                  mt:3
-                },
-              }}>
-            <Link
-              href='https://opensea.io/collection/hype-bears-club-official-'
-              target='_blank'
-              sx={{
-                mt: 4,
-                color: '#800080',
-                borderRadius: '10px',
-                paddingX: 5,
-                border: '2px solid #800080',
-                fontSize: '16px',
-                fontWeight: 700,
-                transitionDuration: '.3s',
-                '&:hover': {
-                  color: '#8a2be2',
-                  boxShadow: 'inset 0 0 0 1px #8a2be2',
-                  border: '1px solid #8a2be2',
-                },
-                [theme.breakpoints.down('md')]: {
-                  mt: 2
-                },
-              }}>
-              BUY NOW
-            </Link>
-              </CardActions>
-            </CardContent>
-          </Card>
-        </Box>
-      </Container>
-      </Box>
-    )
+          BUY NOW
+        </Button>
+          </Box>
+      </Grid>
+    </Grid>
+  )
 };
 
 export default Banner;

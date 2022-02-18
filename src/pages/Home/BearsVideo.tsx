@@ -1,7 +1,7 @@
 import React from 'react';
-import { Container, Typography} from "@mui/material";
+import { Grid,  Typography, useTheme} from "@mui/material";
 
-const cards: string[] = [
+const cards : string[] = [
   '1',
   '2',
   '3',
@@ -10,24 +10,28 @@ const cards: string[] = [
 
 
 export const BearsVideo = () => {
+  const theme = useTheme();
   return (
-    <Container  sx={{
-      display: 'flex',
-      justifyContent: 'space-around',
-      alignItems: 'center',
-      flexWrap: 'wrap',
-      flexDirection: 'column',
-    }}>
-        {
-          cards.map((name) =>
-              <Typography component='img' src={`/images/cards/${name}.png`} sx={{
-                height: 'auto',
-                paddingTop: '50px',
-                maxWidth: '300px',
-                minHeight: '300px'
-              }}/>
-          )
-        }
-    </Container>
+      <Grid container
+            direction='row'
+            justifyContent='space-around'
+            alignItems='center'
+            sx={{
+              height: '100%',
+              [theme.breakpoints.down('sm')]: {
+
+              },
+            }}
+      >
+      {
+        cards.map((name) =>
+          <Typography component='img' src={`/images/cards/${name}.png`} sx={{
+            minWidth: '200px',
+            maxHeight: '60%',
+            paddingTop: '30px',
+          }}/>
+        )
+      }
+    </Grid>
   );
 }

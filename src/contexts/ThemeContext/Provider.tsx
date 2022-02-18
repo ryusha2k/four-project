@@ -52,7 +52,7 @@ export const ThemeProviderWrapper: React.FC = ({children}) => {
                 MuiToolbar: {
                     styleOverrides: {
                         root: {
-                            background: black
+                            background: "transparent"
                         },
                         gutters: {
                             // minHeight: '0px !important',

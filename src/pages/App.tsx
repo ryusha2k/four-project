@@ -16,12 +16,12 @@ const Inspector = lazy(() => import('./Inspector'));
 const App: React.FC = () => {
   return (
     <Router history={history}>
+      <Route path="/" exact>
+        <Home/>
+      </Route>
       <HideBar>
         <SuspenseWithChunkError fallback={<PageLoader />}>
           <Switch>
-            <Route path="/" exact>
-              <Home/>
-            </Route>
             <Route path="/inspector" exact>
               <Web3ReactProvider getLibrary={getLibrary}>
                 <RefreshContextProvider>

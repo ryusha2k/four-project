@@ -61,8 +61,12 @@ export default function HideBar(props: Props) {
 
   return (
     <>
-      <HideOnScroll {...props}>
-        <AppBar>
+      <HideOnScroll {...props} >
+        <AppBar sx={{
+          backgroundColor: 'transparent',
+          color: 'black',
+          boxShadow: 0
+        }}>
           <Toolbar>
             <Container>
               <Grid container>

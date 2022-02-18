@@ -1,5 +1,5 @@
 import React from "react";
-import {Box, useTheme} from "@mui/material";
+import {Box} from "@mui/material";
 import { Theme } from "@mui/material/styles";
 import { SxProps } from "@mui/system";
 import Twitter from '../../assets/images/links/twitter.svg';
@@ -36,7 +36,6 @@ interface Props {
   sx?: SxProps<Theme>;
 }
 export const AllExternalLinks = ({sx, multi}: Props) => {
-  const theme = useTheme();
   return (
     <Box sx={{display: 'flex', flexWrap: multi ? 'wrap' : 'nowrap'}}>
       {links.map(
@@ -44,7 +43,6 @@ export const AllExternalLinks = ({sx, multi}: Props) => {
           <MyLink key={link.path} href={link.path} target="_blank" sx={{
             width: 36,
             height: 36,
-            backgroundColor: theme.palette.grey.A700,
             borderRadius: '4px',
             display: 'flex',
             justifyContent: 'center',
