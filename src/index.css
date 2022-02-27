@@ -1,19 +1,13 @@
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-html, body, #root {
-    height: 100%;
-    width: 100%;
+.res-font {
+    font-size: clamp(1.5rem,2.5vw + .5rem,8rem);
 }
-html::-webkit-scrollbar {
-    display: none;
+.res-font-sm {
+    font-size: clamp(.5rem,1vw + .5rem,4rem);
 }
-
-*{
-    text-decoration: none;
-    list-style: none;
-    box-sizing: border-box;
+.res-font-usm {
+    font-size: clamp(.5rem,.7vw + .5rem,4rem);
 }
-
