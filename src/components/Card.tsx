@@ -26,7 +26,7 @@ const cards = [
                 <section className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 flex flex-col md:flex-row justify-center items-center  gap-6 px-8 py-10 mx-auto">
                 {cards.map((card) => (
       <div key={card.id} className="brand group">
-        <img src={card.imageSrc} alt="fill" width='360px' height='450px' />
+        <img src={card.imageSrc} alt="fill" width='360px' height='450px' className="min"/>
       </div>
 ))}
     </section>
