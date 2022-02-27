@@ -9,7 +9,6 @@ const Section = () => {
             <button className='px-12 py-2 bg-black/75 text-white uppercase rounded-md animate-pulse font-bold'>BUY NOW</button>
         </div>
     </div>
-    
   )
 }
 
