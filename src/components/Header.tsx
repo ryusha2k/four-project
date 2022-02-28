@@ -1,10 +1,15 @@
 
-import React from 'react';
+import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
+
+  let [open, setopen] = useState(false)
  
   const links = [
+    { name: "HOME" },
+    { name: "RELEASE" },
+    { name: "TEAM" },
     {
       id: 1,
       imageSrc: '/images/links/discord.svg',
@@ -35,31 +40,31 @@ const Header = () => {
             imageAlt: "twitter",
             link: 'https://twitter.com'
           },
+         
+
   ]
+
 
  
   return (
-    <div className='w-full absolute lg:flex items-center p-5 flex justify-between'>
-        <span className='text-4xl font-extrabold uppercase  select-none'>Logo</span>
+        <div className='w-full absolute lg:flex items-center p-5 flex justify-between'>
+        <img src={open ? "/images/icon-close.svg" : "/images/icon-hamburger.svg"} className="md:hidden  fixed right-5 cursor-pointer z-20 top-6" onClick={() => setopen(!open)} />
+        <img src="/images/logo.svg" alt="logo" className="w-10 ml-7" />
+        <nav className=' items-center'>
 
-        <nav>
-    
-          
-            <ul className='hidden lg:flex gap-7 uppercase p-2 font-medium'>
-                <li><Link to='/'>Home</Link></li>
-                <li><Link to='/'>Release</Link></li>
-                <li><Link to='/'>Team</Link></li>
+            <ul className={` bg-[#ffffff14] font-medium backdrop-blur-md md:bg-none  md:pl-10 pr-28 md:static fixed duration-500 ease-linear top-0 md:h-auto h-screen  ${!open ? 'right-[-100%] ' : 'right-0'}`}>
+           
                 {links.map((link) => (
-                    <a href={link.link}><img key={link.id} src={link.imageSrc} alt={link.imageAlt}/></a>
+                  <li   className="md:inline-block  md:ml-10 ml-5 md:my-0 my-6 border-transparent hover:border-white duration-300">
+                    <a>{link.name}<img key={link.id} src={link.imageSrc} alt={link.imageAlt}/></a>
+                    </li>
                 )
                 )}
             </ul>
 
         </nav>
 
-        
-
-    </div>
+        </div>
   );
 };
 
