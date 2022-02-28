@@ -1,7 +1,5 @@
-import { MenuOutlined } from '@material-ui/icons';
 import React,{useState} from 'react';
 import { Link } from 'react-router-dom';
-import NavMobile from './NavMobile';
 
 const Header = () => {
 
@@ -23,9 +21,7 @@ const Header = () => {
 
         </nav>
 
-        <div className='lg:hidden scale-150'>
-        <MenuOutlined onClick={showMenu} className='cursor-pointer'/>
-        </div>
+        
 
     </div>
   );
