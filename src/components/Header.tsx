@@ -15,7 +15,7 @@ const Header = () => {
         <span className='text-4xl font-extrabold uppercase  select-none'>Logo</span>
 
         <nav>
-            <ul className='hidden lg:flex gap-5 uppercase p-6 font-medium'>
+            <ul className='hidden lg:flex gap-10 uppercase p-6 font-medium'>
                 <li><Link to='/'>Home</Link></li>
                 <li><Link to='/'>Release</Link></li>
                 <li><Link to='/'>Team</Link></li>
