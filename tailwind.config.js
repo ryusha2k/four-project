@@ -25,6 +25,9 @@ module.exports = {
     },
     zIndex: {
       '10000':'10000'
+    },
+    height: {
+      '130': '130vh'
     }
   },
 },
