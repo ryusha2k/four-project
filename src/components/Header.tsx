@@ -60,7 +60,7 @@ const Header = () => {
         <div className='w-screen h-[80px] z-10 p-5  fixed'>
           
        <div className='px-2 flex justify-between items-center w-full h-full'>
-       <img src="/images/logo.svg" alt="logo" className="w-10 ml-7" />
+       <img src="/images/logo.svg" alt="logo" className="w-10 ml-0" />
         <div className='flex items-center'>
         
             <ul className={`pr-32 bg-[#ffffff14] font-medium backdrop-blur-md md:bg-none  md:pl-10 md:pr-6 md:static fixed duration-75 ease-linear top-0 md:h-auto h-screen  ${!open ? 'right-[-100%] ' : 'right-0'}`}>
